@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main(char c[])
+{
+	int firstNum, secondNum, degree, powerOfTen;
+	int addArray[10];
+	degree = 0;
+	if(c[0] == 'x' || c[0] == 'X')
+	{
+		degree = 1;
+		firstNum = 1;
+	}
+
+	for(int i = 0; i < sizeof(c) || degree > 0; i=i+1)
+	{
+		if(c[i] == 'x' || c[i] == 'X')
+		{
+			degree = i+1;
+		}
+	}
+	
+	for(int i = 0; i < degree; i = i+1)
+	{
+		powerOfTen = 0;
+		for(int j = 0; j < degree; j = j+1)
+			powerOfTen = 
+		addArray[i] = ((int)c[i]-48) 
+		
+	}
+	return 0;
+}
+
+int findRoot(int a, int b)
+{
+	int total = 0;
+	total = total - b;
+	total = total/a;
+	return total;
+}
