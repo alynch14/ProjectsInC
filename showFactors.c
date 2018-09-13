@@ -1,26 +1,14 @@
-#using <stdio.h>
-
-int newArray();
+#include <stdio.h>
 
 int main ()
 {
-	int factorArray[2];
-	int num, x, y, ans;
+	int num;
 
 	printf("Please enter a number you would like the factors of: ");
-	scanf("%d", num);
+	scanf("%d", &num);
 
-	while(n
-}
-
-int* newArray(int array[], int size)
-{
-	int newArray[size*2];
-	for(int i = 0; i<size; i++)
+	for(int i = 1; i<num; i++)
 	{
-		newArray[i] = array[i]
+		if(num%i == 0) printf("%d\n", i);
 	}
-
-	free(array);
-	return *newArray;
 }
