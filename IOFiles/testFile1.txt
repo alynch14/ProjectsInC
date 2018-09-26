@@ -1,0 +1,12 @@
+Hello, World!
+I hope this works well.
+What even is the end of a file?
+Do files really ever end?
+Who knows.
+
+I sure don't.
+One time, a long time ago, there was a man who wanted to test a program, so her wrote a very long string of characters on one line to see if there was a limit to how many a C program would process before moving on to the next line.
+
+Well, now he has an answer.
+
+End of File.
