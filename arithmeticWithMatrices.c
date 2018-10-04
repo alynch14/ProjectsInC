@@ -2,73 +2,75 @@
 #include <time.h>
 #include <stdlib.h>
 
-int addMatrices();
-int subMatrices();
+void addMatrices();
+void subMatrices();
+int n, m;
 
 int main(){
-    int n, m;
-
     printf("Please enter the sizes of the two-dimensional array: ");
-    scanf("%d, %d", n, m);
+    scanf("%d, %d", &n, &m);
 
     int array1[n][m], array2[n][m];
 
+    printf("The first array is: \n");
     srand(time(NULL));
     for(int i = 0; i<n; i++){
         for(int j = 0; j<m; j++){
             array1[i][j] = rand();
+            printf("%d ", array1[i][j]);
         }
+        printf("\n");
     }    
+    printf("\n");
 
+    printf("The second array is: \n");
     for(int i = 0; i<n; i++){
         for(int j = 0; j<m; j++){
             array2[i][j] = rand();
+            printf("%d ", array2[i][j]);
         }
+        printf("\n");
     }
+    printf("\n");
 
-    int** result = addMatrices(array1, array2, n, m);
+    int finalArray[n][m];
+    addMatrices(array1, array2, finalArray);
 
     printf("After adding the two matrices together, the resulting matrice is: \n");
     for(int i = 0; i<n; i++){
         for(int j = 0; j<n; j++){
-            printf("%d", &result[i][j]);
+            printf("%d ", finalArray[i][j]);
         }
-        printf"\n");
+        printf("\n");
     }
+    printf("\n");
 
-    result = subMatrices(array1, array2, n, m);
+    subMatrices(array1, array2, finalArray);
 
     printf("After subtracting the two matrices together, the resulting matrice is: \n");
     for(int i = 0; i<n; i++){
         for(int j = 0; j<n; j++){
-            printf("%d", &result[i][j]);
+            printf("%d ", finalArray[i][j]);
         }
-        printf"\n");
+        printf("\n");
     }
+    printf("\n");
 
     return 0;
 }
 
-int** addMatrices(int** arr1, int** arr2, int n, int m){
-    int finalArr[n][m];
-
+void addMatrices(int arr1[n][m], int arr2[n][m], int finalArr[n][m]){
     for(int i = 0; i<n; i++){
         for(int j = 0; j<n; j++){
             finalArr[i][j] = arr1[i][j] + arr2[i][j];
         }
     }
-
-    return finalArr;
 }
 
-int** subMatrices(int** arr1, int** arr2, int n, int m){
-    int finalArr[n][m];
-
+void subMatrices(int arr1[n][m], int arr2[n][m], int finalArr[n][m]){
     for(int i = 0; i<n; i++){
         for(int j = 0; j<n; j++){
             finalArr[i][j] = arr1[i][j] - arr2[i][j];
         }
     }
-
-    return finalArr;
 }
