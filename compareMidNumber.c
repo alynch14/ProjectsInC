@@ -14,11 +14,12 @@ int main()
 	printf("The numbers that are surrounded by larger numbers on both sides are: ");
 	for(int i = 0; !feof(input); (i++)%3)
 	{
-		fscanf(input, "%1d", &comparedNums[i]);
-		if(&comparedNums[2] != NULL)
+		fscanf(input, "%1d", comparedNums[i]);
+		if(comparedNums[2] != NULL)
 		{
 			//If the number is surrounded by two bigger numbers, then print it out
-			if(comparedNums[((i+2)%3)] < comparedNums[i] && comparedNums[((i+2)%3)] < comparedNums[((i+1)%3)]) printf("%d ", comparedNums[((i+2)%3)]);
+			if(comparedNums[((i+2)%3)] < comparedNums[i] && comparedNums[((i+2)%3)] < comparedNums[((i+1)%3)]) 
+				printf("%d ", comparedNums[((i+2)%3)]);
 		}
 	}
 	
