@@ -2,11 +2,11 @@
 #include <math.h>
 
 double getCircumference(double diameter){
-    return diameter*math.PI;
+    return diameter*3.1415;
 }
 
 double getArea(double radius){
-    return radius*radius*math.PI;
+    return radius*radius*3.1415;
 }
 
 int main(){
